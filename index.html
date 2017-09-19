@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Train Scheduler</title>
+
+        <!-- Bootstrap/style CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+       
+        <!-- adding moment.js -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+         <!-- adding Firebase CDN -->
+         <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+        
+
+      
+    </head>
+    <body>
+        
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1>Train Scheduler</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Emloyee info log -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                      <h3 class="panel-title" id="#add">Current Train Schedule</h3>
+                </div>
+                <div class="panel-body">
+                      
+                    <table class="table table-hover" id="train-table">
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                      
+                </div>
+            </div>
+
+            <!-- Adding train -->
+            
+            <div class="panel panel-primary">
+                  <div class="panel-heading">
+                        <h3 class="panel-title">Add train</h3>
+                  </div>
+                  <div class="panel-body">
+                        
+                        <form destination="form">
+                            <div class="form-group">
+                                <label for="train-name-input">Train Name</label>
+                                <input type="text" class="form-control" id="train-name-input" placeholder="Billy Crystal">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination-input">Destination</label>
+                                <input type="text" class="form-control" id="destination-input" placeholder="Austin">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstTrain-input">First Train Time (HH:MM - Military Time)</label>
+                                <input type="text" class="form-control" id="firstTrain-input" placeholder="16:00">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency-input">Frequency (Min)</label>
+                                <input type="text" class="form-control" id="trainFrequency-input" placeholder="30">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="add-train-btn">Submit</button>
+                        </form>
+                        
+                  </div>
+            </div>
+        
+            <!--End site container -->
+        </div>
+        
+        
+       
+         <!-- Adding Jquery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <!-- linking logic.js -->
+        <script src="assets/js/logic.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
